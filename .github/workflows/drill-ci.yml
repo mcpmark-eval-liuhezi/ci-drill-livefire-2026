@@ -1,0 +1,14 @@
+name: Drill CI
+
+on:
+  push:
+  workflow_dispatch:
+
+jobs:
+  drill:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deliberate failure
+        run: |
+          echo "This step is expected to fail — part of the CI drill."
+          exit 1
